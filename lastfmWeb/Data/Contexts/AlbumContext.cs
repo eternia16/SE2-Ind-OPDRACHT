@@ -15,24 +15,24 @@ namespace lastfmWeb.Data.Context
     /// <summary>
     /// Context class of Scrobbel.
     /// </summary>
-    class ArtiestContext : DbContext
+    class AlbumContext : DbContext
     {
         /// <summary>
         /// Public constructor
         /// </summary>
-        public ArtiestContext()
+        public AlbumContext()
             : base()
         {
         }
 
 
 
-        public List<Artiest> GetAll()
+        public List<Album> GetAll()
         {
-            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectsQuery(new Artiest()));
+            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectsQuery(new Album()));
             OracleDataReader reader = queryBuilder.CreateCommand(GetConnection()).ExecuteReader();
 
-            List<Artiest> ArtiestList = new List<Artiest>();
+            List<Album> AlbumList = new List<Album>();
             try
             {
                 if (!reader.HasRows)
@@ -40,30 +40,31 @@ namespace lastfmWeb.Data.Context
 
                 while (reader.Read())
                 {
-                    ArtiestList.Add(new Artiest()
+                    AlbumList.Add(new Album()
                     {
                         id = reader.GetInt32("id"),
+                        artiest_id = reader.GetInt32("artiest_id"),
                         naam = reader.GetString("naam"),
-                        geboortedatum = reader.GetString("geboortedatum"),
-                        geboorteplaats = reader.GetString("geboorteplaats"),
+                        releasedate = reader.GetDateTime("releasedate"),
                         omschrijving = reader.GetString("omschrijving")
 
                     });
                 }
             }
             finally { reader.Close(); }
-            return ArtiestList;
+            return AlbumList;
         }
 
-        public List<Artiest> Get(string query)
+        public List<Album> Get(string query)
         {
-            Artiest queryArtiest = new Artiest();
-            queryArtiest.naam = query;
-            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectQueryLike(queryArtiest));
+            Album queryAlbum = new Album();
+            
+            queryAlbum.naam = query;
+            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectQueryLike(queryAlbum));
            
             OracleDataReader reader = queryBuilder.CreateCommand(GetConnection()).ExecuteReader();
 
-            List<Artiest> ArtiestList = new List<Artiest>();
+            List<Album> AlbumList = new List<Album>();
             try
             {
                 if (!reader.HasRows)
@@ -71,19 +72,19 @@ namespace lastfmWeb.Data.Context
 
                 while (reader.Read())
                 {
-                    ArtiestList.Add(new Artiest()
+                    AlbumList.Add(new Album()
                     {
                         id = reader.GetInt32("id"),
+                        artiest_id = reader.GetInt32("artiest_id"),
                         naam = reader.GetString("naam"),
-                        geboortedatum = reader.GetString("geboortedatum"),
-                        geboorteplaats = reader.GetString("geboorteplaats"),
+                        releasedate = reader.GetDateTime("releasedate"),
                         omschrijving = reader.GetString("omschrijving")
 
                     });
                 }
             }
             finally { reader.Close(); }
-            return ArtiestList;
+            return AlbumList;
         }
 
 

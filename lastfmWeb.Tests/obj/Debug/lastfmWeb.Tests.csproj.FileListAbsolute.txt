@@ -11,7 +11,6 @@ c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\b
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\EntityFramework.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.Owin.Security.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
-c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\lastfmWeb.pdb
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
@@ -22,7 +21,6 @@ c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\b
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\EntityFramework.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.Owin.Security.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
-c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\obj\Debug\lastfmWeb.Tests.csprojResolveAssemblyReference.cache
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\obj\Debug\lastfmWeb.Tests.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb.Tests\obj\Debug\lastfmWeb.Tests.pdb

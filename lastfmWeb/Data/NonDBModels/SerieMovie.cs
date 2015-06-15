@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Netflix_Web_App.Data.NonDBModels
+namespace lastfmWeb.Data.NonDBModels
 {
     /// <summary>
     /// SerieMovie bind class for a repeater controller in ASP.NET

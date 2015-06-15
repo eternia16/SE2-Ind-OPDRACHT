@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="lastfmWeb._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label ID="Message"
+    <div id="Message">
+    <asp:Label ID="Message2"
         ForeColor="Red"          
         runat="server"/>
       <br/>
+        </div>
     <div class="jumbotron">
         <h1>Last.fm</h1>
         <p class="lead">Last.fm is een sexy site waarmee je alles kan bijhouden over je favorieten artiesten en statistieken over je muziek luister gedrag</p>

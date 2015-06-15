@@ -1,5 +1,5 @@
 ﻿using Devart.Data.Oracle;
-using OracleHandler.Framework.Data;
+using lastfmWeb.Framework.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OracleHandler.Framework
+namespace lastfmWeb.Framework
 {
     /// <summary>
     /// Context class to communicate with the database.
@@ -36,7 +36,7 @@ namespace OracleHandler.Framework
         /// <returns>True or false whether the connection is open and valid or not.</returns>
         bool openConnection()
         {
-            connection = new OracleConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OracleContextConnection"].ConnectionString);
+            connection = new OracleConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             connection.Open();
 
             if (!connection.State.Equals(ConnectionState.Open))
@@ -114,12 +114,6 @@ namespace OracleHandler.Framework
         }
 
 
-        /// <summary>
-        /// Static variant to get an OracleQuery.
-        /// </summary>
-        /// <param name="obj">Model class. Either empty or with filled properties.</param>
-        /// <param name="instance">Open OracleConnection instance.</param>
-        /// <returns>OracleQuery</returns>
         public static OracleQuery GetObjectQuery(object obj, OracleConnection instance)
         {
             if (instance.Equals(null))
@@ -145,6 +139,34 @@ namespace OracleHandler.Framework
             }
 
             query.Rownum(1);
+            Debug.WriteLine("Select query: " + query.GetQuery());
+            return query;
+        }
+
+        public OracleQuery GetObjectQueryLike(object obj)
+        {
+            if (this.GetConnection().Equals(null))
+                Debug.WriteLine("Connection is null");
+
+            OracleQuery query = new OracleQuery(OracleQuery.SELECT);
+            query.Select("");
+            query.From(((ModelAttribute)obj.GetType()
+                    .GetCustomAttribute(typeof(ModelAttribute)))
+                    .tableName);
+
+            object valueUsedInForeach;
+
+            foreach (PropertyInfo prop in obj.GetType().GetProperties())
+            {
+                valueUsedInForeach = prop.GetValue(obj, null);
+
+                if (valueUsedInForeach != null && !valueUsedInForeach.Equals(""))
+                {
+                    query.Where(prop.Name, "like", valueUsedInForeach);
+                }
+
+            }
+
             Debug.WriteLine("Select query: " + query.GetQuery());
             return query;
         }
@@ -214,7 +236,6 @@ namespace OracleHandler.Framework
             }
 
             OracleQuery query = new OracleQuery(OracleQuery.INSERT);
-            //ModelAttribute tableModelAttribute = (ModelAttribute) obj.GetType().GetCustomAttribute(typeof(ModelAttribute));
             query.Insert(( (ModelAttribute) obj.GetType()
                     .GetCustomAttribute(typeof(ModelAttribute)))
                     .tableName,
@@ -226,12 +247,6 @@ namespace OracleHandler.Framework
         }
 
 
-        /// <summary>
-        /// Create a update query.
-        /// </summary>
-        /// <param name="obj">Model class</param>
-        /// <param name="whereObjs">Dictionary for the where clause</param>
-        /// <returns>OracleQuery</returns>
         public OracleQuery UpdateObjectQuery(object obj, Dictionary<string, object> whereObjs)
         {
             if (this.GetConnection().Equals(null))

@@ -1,5 +1,5 @@
-﻿using OracleHandler.Framework.Data;
-using OracleHandler.Framework.Data.Models;
+﻿using lastfmWeb.Framework.Data;
+using lastfmWeb.Framework.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +22,8 @@ namespace lastfmWeb.Data.Models
         public string huisnummer { get; set; }
         public string postcode { get; set; }
         public string land { get; set; }
+        public int? administrator { get; set; }
+        public int? artiest_id { get; set; }
 
     }
 }

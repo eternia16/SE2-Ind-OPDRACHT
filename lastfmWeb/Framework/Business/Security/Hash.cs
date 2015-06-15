@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace Netflix_Web_App.Framework.Business.Security
+namespace lastfmWeb.Framework.Business.Security
 {
     /// <summary>
     /// Security class to handle the hashing. I.e password hashing.

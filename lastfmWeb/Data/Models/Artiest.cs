@@ -1,5 +1,5 @@
-﻿using OracleHandler.Framework.Data;
-using OracleHandler.Framework.Data.Models;
+﻿using lastfmWeb.Framework.Data;
+using lastfmWeb.Framework.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

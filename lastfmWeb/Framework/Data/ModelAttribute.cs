@@ -1,4 +1,4 @@
-﻿namespace OracleHandler.Framework.Data
+﻿namespace lastfmWeb.Framework.Data
 {
     using System;
     using System.Collections.Generic;

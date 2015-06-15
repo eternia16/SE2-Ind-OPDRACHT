@@ -1,5 +1,5 @@
-﻿using OracleHandler.Framework.Data;
-using OracleHandler.Framework.Data.Models;
+﻿using lastfmWeb.Framework.Data;
+using lastfmWeb.Framework.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +16,9 @@ namespace lastfmWeb.Data.Models
         public int? id { get; set; }
         public int? artiest_id { get; set; }
         public string naam { get; set; }
-        public DateTime releasedate { get; set; }
+        public DateTime? releasedate { get; set; }
         public string omschrijving { get; set; }
+        public string artiest { get; set; }
 
 
     }

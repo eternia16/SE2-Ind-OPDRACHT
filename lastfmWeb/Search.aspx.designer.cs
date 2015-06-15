@@ -10,42 +10,33 @@
 namespace lastfmWeb {
     
     
-    public partial class _Default {
+    public partial class Search {
         
         /// <summary>
-        /// Message2 control.
+        /// rpArtiest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Message2;
+        protected global::System.Web.UI.WebControls.Repeater rpArtiest;
         
         /// <summary>
-        /// Email control.
+        /// rpAlbums control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.Repeater rpAlbums;
         
         /// <summary>
-        /// Password control.
+        /// rpTracks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
-        
-        /// <summary>
-        /// RememberMe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+        protected global::System.Web.UI.WebControls.Repeater rpTracks;
     }
 }

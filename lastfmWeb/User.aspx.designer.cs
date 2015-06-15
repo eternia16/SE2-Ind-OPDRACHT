@@ -10,42 +10,42 @@
 namespace lastfmWeb {
     
     
-    public partial class _Default {
+    public partial class User {
         
         /// <summary>
-        /// Message2 control.
+        /// btScrobbel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Message2;
+        protected global::System.Web.UI.WebControls.Button btScrobbel;
         
         /// <summary>
-        /// Email control.
+        /// btArtiest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.Button btArtiest;
         
         /// <summary>
-        /// Password control.
+        /// tbZoeken control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox tbZoeken;
         
         /// <summary>
-        /// RememberMe control.
+        /// btZoeken control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+        protected global::System.Web.UI.WebControls.Button btZoeken;
     }
 }

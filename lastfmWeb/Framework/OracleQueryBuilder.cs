@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Devart.Data.Oracle;
 using System.Diagnostics;
 
-namespace OracleHandler.Framework
+namespace lastfmWeb.Framework
 {
     /// <summary>
     /// Oracle Query Builder to build an OracleCommand with.

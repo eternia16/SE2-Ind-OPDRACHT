@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OracleHandler.Framework.Data.DAO
+namespace lastfmWeb.Framework.Data.DAO
 {
     /// <summary>
     /// Interface for DAOs of models.
