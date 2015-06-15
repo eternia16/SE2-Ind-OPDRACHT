@@ -14,6 +14,11 @@ namespace lastfmWeb.Business.Controllers
 
     public class LoginController
     {
+
+        /// <summary>
+        /// Met dank aan Kevin die mij enorm geholpen heeft met SQL injection preventie en inloggen.
+        /// </summary>
+        /// <returns></returns>
         public List<Gebruiker> getAll()
         {
             List<Gebruiker> returnList = new List<Gebruiker>();
