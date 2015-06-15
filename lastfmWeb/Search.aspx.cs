@@ -59,6 +59,7 @@ namespace lastfmWeb
                 foreach (Track x in tracks)
                 {
                     Artiest xArtiest = artiesten.Find(z => z.id == x.artiest_id);
+
                     x.artiest = xArtiest.naam;
 
                     Album xAlbum = albums.Find(z => z.id == x.album_id);

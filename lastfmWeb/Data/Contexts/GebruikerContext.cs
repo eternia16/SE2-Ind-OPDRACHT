@@ -87,7 +87,9 @@ namespace lastfmWeb.Data.Context
                         woonplaats = reader.GetString("woonplaats"),
                         huisnummer = reader.GetString("huisnummer"),
                         postcode = reader.GetString("postcode"),
-                        land = reader.GetString("land")
+                        land = reader.GetString("land"),
+                        artiest_id = reader.GetInt32("artiest_id"),
+                        administrator = reader.GetInt32("administrator")
                     };
 
                     break;
@@ -99,10 +101,7 @@ namespace lastfmWeb.Data.Context
         }
 
 
-        /// <summary>
-        /// Creates a single Gebruiker
-        /// </summary>
-        /// <param name="Gebruiker">Gebruiker model class with filled properties.</param>
+
         public void Create(Gebruiker Gebruiker)
         {
             OracleQueryBuilder queryBuilder = new OracleQueryBuilder(InsertObjectQuery(Gebruiker));
@@ -113,11 +112,7 @@ namespace lastfmWeb.Data.Context
         }
 
 
-        /// <summary>
-        /// Updates an Gebruiker or multiple Gebruikers. Depending on the whereObjects.
-        /// </summary>
-        /// <param name="Gebruiker">Gebruiker class model with filled properties that have to be changed</param>
-        /// <param name="whereObjs">Where clause statements</param>
+
         public void Update(Gebruiker Gebruiker, Dictionary<string, object> whereObjs)
         {
             OracleQueryBuilder queryBuilder = new OracleQueryBuilder(UpdateObjectQuery(Gebruiker, whereObjs));
@@ -129,10 +124,7 @@ namespace lastfmWeb.Data.Context
 
 
         /// <summary>
-        /// Deletes a single Gebruiker. DISCOURAGED TO USE. IT'S BEEN MADE PRIVATE TO PREVENT MISUSE OR BUGS OR WHATSOEVER THAT COULD HARM AN Gebruiker.
-        /// THIS HAS BEEN IMPLEMENTED INCASE IT COULD BE USED IN THE NEAR FUTURE
-        /// </summary>
-        /// <param name="Gebruiker">Gebruiker with filled properties</param>
+
         void Delete(Gebruiker Gebruiker)
         {
             OracleQueryBuilder queryBuilder = new OracleQueryBuilder(DeleteObjectQuery(Gebruiker));

@@ -10,7 +10,8 @@
     <div class="jumbotron">
         <h1>Last.fm</h1>
         <p class="lead">Last.fm is een sexy site waarmee je alles kan bijhouden over je favorieten artiesten en statistieken over je muziek luister gedrag</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+        <asp:Button ID="btRegistreer" runat="server" class="btn btn-primary btn-lg" Text="Registreer  nu!" />
     </div>
 
     <div class="row">
@@ -20,12 +21,12 @@
         <div class="form-group">
                         
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Gebruikersnaam</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-10"></br>
                             <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="SingleLine" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label> </br>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />

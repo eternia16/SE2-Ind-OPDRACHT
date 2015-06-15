@@ -14,7 +14,15 @@ namespace lastfmWeb.Business.Controllers
 
     public class LoginController
     {
+        public List<Gebruiker> getAll()
+        {
+            List<Gebruiker> returnList = new List<Gebruiker>();
+            GebruikerContext ctx = new GebruikerContext();
+            returnList = ctx.GetAll();
 
+
+            return returnList; 
+        }
         public ViewModel login(string gebruikersnaam, string wachtwoord)
         {
             ViewModel _output = new ViewModel();
@@ -29,7 +37,7 @@ namespace lastfmWeb.Business.Controllers
 
 
                 if(!reg.IsMatch(gebruikersnaam) || !reg.IsMatch(wachtwoord))
-                    throw new Exception("Geen rare tekens in je wachtwoord of gebruikersnaam");
+                    throw new Exception("Invalid username");
 
                 Gebruiker _Gebruiker = ctx.Get(new Gebruiker()
                 {

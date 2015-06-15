@@ -165,8 +165,6 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Album.aspx" />
-    <Content Include="Artiest.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -177,6 +175,7 @@
     <Content Include="Models\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Models\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -212,7 +211,6 @@
     <Content Include="Global.asax" />
     <Content Include="Search.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="Track.aspx" />
     <Content Include="User.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -220,6 +218,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Settings.StyleCop" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -333,13 +332,6 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Album.aspx.cs">
-      <DependentUpon>Album.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Album.aspx.designer.cs">
-      <DependentUpon>Album.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -351,13 +343,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Artiest.aspx.cs">
-      <DependentUpon>Artiest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Artiest.aspx.designer.cs">
-      <DependentUpon>Artiest.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Business\Controllers\ShoutController.cs" />
     <Compile Include="Business\Controllers\TrackController.cs" />
     <Compile Include="Business\Controllers\AlbumController.cs" />
     <Compile Include="Business\Controllers\ArtiestController.cs" />
@@ -380,6 +366,7 @@
     <Compile Include="Data\Classes\Tag.cs" />
     <Compile Include="Data\Classes\Track.cs" />
     <Compile Include="Data\Contexts\AbonnementContext.cs" />
+    <Compile Include="Data\Contexts\ShoutContext.cs" />
     <Compile Include="Data\Contexts\AlbumContext.cs" />
     <Compile Include="Data\Contexts\ArtiestContext.cs" />
     <Compile Include="Data\Contexts\TrackContext.cs" />
@@ -439,13 +426,6 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Track.aspx.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Track.aspx.designer.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-    </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

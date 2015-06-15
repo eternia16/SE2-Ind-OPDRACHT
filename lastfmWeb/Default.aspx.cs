@@ -30,12 +30,10 @@ namespace lastfmWeb
             {
                 Gebruiker _Gebruiker = (Gebruiker)output.GetAttribute("Gebruiker");
 
-                // Setting session variables.
                 Session["Gebruikerid"] = _Gebruiker.id;
                 Session["gebruikernaam"] = _Gebruiker.gebruikersnaam;
-
-                //this.Master.FindControl("bericht").Visible = true;
-                //((HtmlGenericControl)this.Master.FindControl("bericht")).InnerHtml = "You logged in successfully, <b>" + _Gebruiker.gebruikersnaam + "</b>";
+                Session["zzZKKKKss"] = _Gebruiker.administrator;
+                Session["Artiest"] = _Gebruiker.artiest_id;
                 this.Message2.Visible = true;
                 this.Message2.Text = "You logged in successfully, <b>" + _Gebruiker.gebruikersnaam + "</b>";
 
@@ -47,8 +45,6 @@ namespace lastfmWeb
             }
             else if (output.HasAttribute("error"))
             {
-                //this.Master.FindControl("Message").Visible = true;
-                //((HtmlGenericControl)this.Master.FindControl("Message")).InnerText = "Door een probleem kon je niet inloggen"; 
             }
         }
     }
