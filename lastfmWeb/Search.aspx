@@ -77,7 +77,7 @@
 
 <ItemTemplate>
 <tr>
-<td> <a href="<%# "Artiest.aspx?query=" + Eval("id") %>"> <%# Eval("naam") %></a></td>
+<td> <a href="<%# "Tracks.aspx?query=" + Eval("id") %>"> <%# Eval("naam") %></a></td>
 <td><%#Eval("artiest")%></td>
 <td><%#Eval("album")%></td>
 <td><%#Eval("omschrijving")%></td>

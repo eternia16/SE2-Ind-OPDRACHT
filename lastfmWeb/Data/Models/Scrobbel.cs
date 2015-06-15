@@ -14,8 +14,10 @@ namespace lastfmWeb.Data.Models
     public class Scrobbel : Model
     {
         public int? id { get; set; }
-        public int track_id { get; set; }
-        public int gebruiker_id { get; set; }
-        public DateTime datum { get; set; }
+        public int? track_id { get; set; }
+        public int? gebruiker_id { get; set; }
+        public DateTime? datum { get; set; }
+        public int? scrobble_count { get; set; }
+        public string naamTrack { get; set; }
     }
 }

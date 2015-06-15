@@ -113,6 +113,31 @@ namespace lastfmWeb.Framework
             return query;
         }
 
+        public OracleQuery GetObjectQueryMultiple(object obj)
+        {
+            if (this.GetConnection().Equals(null))
+                Debug.WriteLine("Connection is null");
+
+            OracleQuery query = new OracleQuery(OracleQuery.SELECT);
+            query.Select("");
+            query.From(((ModelAttribute)obj.GetType()
+                    .GetCustomAttribute(typeof(ModelAttribute)))
+                    .tableName);
+
+            object valueUsedInForeach;
+
+            foreach (PropertyInfo prop in obj.GetType().GetProperties())
+            {
+                valueUsedInForeach = prop.GetValue(obj, null);
+                if (valueUsedInForeach != null && !valueUsedInForeach.Equals(""))
+                {
+                    query.Where(prop.Name, "=", valueUsedInForeach);
+                }
+
+            }
+            Debug.WriteLine("Select query: " + query.GetQuery());
+            return query;
+        }
 
         public static OracleQuery GetObjectQuery(object obj, OracleConnection instance)
         {

@@ -27,7 +27,7 @@ namespace lastfmWeb.Data.Context
 
 
 
-        public List<Scrobbel> GetSpecific()
+        public List<Scrobbel> GetAll()
         {
             OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectsQuery(new Scrobbel()));
             OracleDataReader reader = queryBuilder.CreateCommand(GetConnection()).ExecuteReader();
@@ -58,6 +58,36 @@ namespace lastfmWeb.Data.Context
             return Scrobbels;
         }
 
+        public List<Scrobbel> GetAllWhereUser(Scrobbel sc)
+        {
+            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(GetObjectQueryMultiple(sc));
+            OracleDataReader reader = queryBuilder.CreateCommand(GetConnection()).ExecuteReader();
+
+            List<Scrobbel> Scrobbels = new List<Scrobbel>();
+
+            try
+            {
+                if (!reader.HasRows)
+                    Debug.WriteLine("NO ROWS!");
+
+                while (reader.Read())
+                {
+                    Scrobbels.Add(new Scrobbel()
+                    {
+                        id = reader.GetInt32("id"),
+                        track_id = reader.GetInt32("track_id"),
+                        gebruiker_id = reader.GetInt32("gebruiker_id")
+
+                    });
+                }
+            }
+
+            finally { reader.Close(); }
+
+
+
+            return Scrobbels;
+        }
 
     }
 }
