@@ -1,0 +1,342 @@
+<Project>
+  <Name>LAST.fm</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>class</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Artiest</Name>
+        <Access>Public</Access>
+        <Location left="320" top="336" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int ID</Member>
+        <Member type="Field">string naam</Member>
+        <Member type="Field">DateTime geboortedatum</Member>
+        <Member type="Field">string omschrijving</Member>
+        <Member type="Constructor">public Artiest(int id, string naam, DateTime geboortedatum, string geboorteplaats, string omschrijving)</Member>
+        <Member type="Method">public void updateArtiest()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Track</Name>
+        <Access>Public</Access>
+        <Location left="126" top="922" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">Artiest newField</Member>
+        <Member type="Field">Album albumID</Member>
+        <Member type="Field">int omschrijving</Member>
+        <Member type="Field">int tijdsduur</Member>
+        <Member type="Field">DateTime releasedate</Member>
+        <Member type="Method">public string getTrackDurationInMinutes()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Album</Name>
+        <Access>Public</Access>
+        <Location left="85" top="512" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">Artiest artiest</Member>
+        <Member type="Field">string naam</Member>
+        <Member type="Field">DateTime releasedate</Member>
+        <Member type="Field">string omschrijving</Member>
+        <Member type="Field">List&lt;Track&gt; tracks</Member>
+        <Member type="Method">public void addTrack(Track track)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Scrobbel</Name>
+        <Access>Public</Access>
+        <Location left="1079" top="421" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int ID</Member>
+        <Member type="Field">Track track</Member>
+        <Member type="Field">Gebruiker gebruiker</Member>
+        <Member type="Field">DateTime datum</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Shout</Name>
+        <Access>Public</Access>
+        <Location left="757" top="832" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">Gebruiker gebruiker</Member>
+        <Member type="Field">Gebruiker targetGebruiker</Member>
+        <Member type="Field">Artiest artiest</Member>
+        <Member type="Field">Track track</Member>
+        <Member type="Field">DateTime datum</Member>
+        <Member type="Field">string tekst</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Gebruiker</Name>
+        <Access>Public</Access>
+        <Location left="884" top="163" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string straat</Member>
+        <Member type="Field">string woonplaats</Member>
+        <Member type="Field">string huisnummer</Member>
+        <Member type="Field">string postcode</Member>
+        <Member type="Field">string land</Member>
+        <Member type="Method">public bool isUser18()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Account</Name>
+        <Access>Public</Access>
+        <Location left="616" top="43" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string gebruikersnaam</Member>
+        <Member type="Field">string wachtwoord</Member>
+        <Member type="Field">DateTime geboortedatum</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Abonnement</Name>
+        <Access>Public</Access>
+        <Location left="1123" top="56" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">Gebruiker gebruiker</Member>
+        <Member type="Field">DateTime startDatum</Member>
+        <Member type="Field">DateTime eindDatum</Member>
+        <Member type="Field">bool vernieuwen</Member>
+        <Member type="Method">public void notifyUserRenewal()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Tag</Name>
+        <Access>Public</Access>
+        <Location left="977" top="1041" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string naam</Member>
+        <Member type="Field">string omschrijving</Member>
+        <Member type="Field">Track track</Member>
+        <Member type="Field">Album album</Member>
+        <Member type="Field">Artiest artiest</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Bericht</Name>
+        <Access>Public</Access>
+        <Location left="1408" top="91" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">int afzender</Member>
+        <Member type="Field">Gebruiker ontvanger</Member>
+        <Member type="Field">Bericht antwoordOp</Member>
+        <Member type="Field">string inhoud</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DatabaseConnection</Name>
+        <Access>Public</Access>
+        <Location left="1485" top="541" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Object update</Member>
+        <Member type="Method">public void Connect()</Member>
+        <Member type="Method">public List&lt;Gebruiker&gt; getGebruikers()</Member>
+        <Member type="Method">public List&lt;Shout&gt; getShouts()</Member>
+        <Member type="Method">public List&lt;Abonnement&gt; getAbonnement()</Member>
+        <Member type="Method">public List&lt;Track&gt; GetTrack()</Member>
+        <Member type="Method">public List&lt;Artiest&gt; getArtiest()</Member>
+        <Member type="Method">public List&lt;Playlist&gt; getPlaylist()</Member>
+        <Member type="Method">public void Update(Object recievedObject)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>510</X>
+          <Y>415</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="0" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="7" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1105</X>
+          <Y>134</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="9" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1595</X>
+          <Y>207</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1522</X>
+          <Y>332</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="9" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>791</X>
+          <Y>806</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>876</X>
+          <Y>805</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>965</X>
+          <Y>441</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>507</X>
+          <Y>489</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
