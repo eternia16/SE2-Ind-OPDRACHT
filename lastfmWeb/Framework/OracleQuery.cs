@@ -7,32 +7,31 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Class to generate a query.
-    /// </summary>
+ 
+    // Class to generate a query. Orginally used in the proftaak ict4events recycled for this purpose
     public class OracleQuery
     {
 
-        /// <summary>
-        /// Static const variables. Used for types of the action mostly.
-        /// </summary>
+       
+        // Static const variables. Used for types of the action mostly.
+
         public static int SELECT = 0,
             INSERT = 1,
             DELETE = 2,
             UPDATE = 3;
 
 
-        /// <summary>
-        /// Stamdard actions defined.
-        /// </summary>
+
+        // Stamdard actions defined.
+
         private const string _select = "SELECT ",
             _insert = "INSERT INTO ",
             _delete = "DELETE ",
             _update = "UPDATE ";
 
-        /// <summary>
-        /// Types that are available for the where clause.
-        /// </summary>
+
+        // Types that are available for the where clause.
+
         Dictionary<Type, string> typesWhereClause = new Dictionary<Type, string>{
                 { typeof(int), "int" },
                 { typeof(string), "string" },
@@ -40,25 +39,20 @@
             };
 
 
-        /// <summary>
-        /// Properties
-        /// </summary>
+
+        // Properties
+
         private int _type;
         private string _query = "";
         private int _actionAdded = -1;
         private bool _actionReady = false;
         private bool _whereAdded = false;
 
-
-        /// <summary>
-        /// Public constructor
-        /// </summary>
         public OracleQuery() { }
 
-        /// <summary>
-        /// Public constructor. Possibility to set a query type.
-        /// </summary>
-        /// <param name="type">Query type. Check static properties of OracleQuery</param>
+
+        // Public constructor. Possibility to set a query type.
+
         public OracleQuery(int type)
         {
             switch (type)
@@ -84,10 +78,9 @@
             }
         }
 
-        /// <summary>
-        /// Selecting colummns.
-        /// </summary>
-        /// <param name="columns">Columns</param>
+
+        // Selecting colummns.
+
         public void Select(string columns = "")
         {
             InvalidActionUsed(OracleQuery.SELECT);
@@ -102,9 +95,8 @@
         }
 
 
-        /// <summary>
-        /// Adds delete to the query.
-        /// </summary>
+        // Adds delete to the query.
+
         public void Delete()
         {
             InvalidActionUsed(OracleQuery.DELETE);
@@ -114,12 +106,9 @@
         }
 
 
-        /// <summary>
-        /// Adds insert to the query.
-        /// </summary>
-        /// <param name="tableName">Name of the table.</param>
-        /// <param name="values">Values to insert</param>
-        /// <param name="columns">Columns to be filled</param>
+
+        // Adds insert to the query.
+
         public void Insert(string tableName, object[] values, string[] columns = null)
         {
             InvalidActionUsed(OracleQuery.INSERT);
@@ -157,6 +146,9 @@
                         case "string":
                             _values += "'" + val + "'";
                             break;
+                        case "DateTime?":
+                            _values += val;
+                            break;
                         case "int":
                         case "double":
                             _values += val;
@@ -178,12 +170,8 @@
         }
 
 
-        /// <summary>
-        /// Add update to the query.
-        /// </summary>
-        /// <param name="tableName">Name of the table</param>
-        /// <param name="values">Values to be filled</param>
-        /// <param name="columns">Columns to be updated</param>
+        // Add update to the query.
+
         public void Update(string tableName, object[] values, string[] columns = null)
         {
             InvalidActionUsed(OracleQuery.UPDATE);
@@ -232,13 +220,7 @@
         }
 
 
-        /// <summary>
-        /// Adds where clause to the query..
-        /// </summary>
-        /// <param name="column">Column in the where clause</param>
-        /// <param name="op">Operator to use</param>
-        /// <param name="val">Value after the operator.</param>
-        /// <param name="field">Is val a field?</param>
+
         public void Where(string column, string op, object val, bool field = false)
         {
             if(!_actionReady && _type != OracleQuery.UPDATE)
@@ -278,12 +260,8 @@
         }
 
 
-        /// <summary>
-        /// Adds where clause. Sub Queries allowed.
-        /// </summary>
-        /// <param name="column">Column for the sub query</param>
-        /// <param name="op">Operator</param>
-        /// <param name="subquery">Subquery</param>
+
+        // Adds where clause. Sub Queries allowed.
         public void WhereSubQuery(string column, string op, string subquery)
         {
             if (!_actionReady)
@@ -297,20 +275,17 @@
         }
 
 
-        /// <summary>
-        /// Add rownum to where clause.
-        /// </summary>
-        /// <param name="limit">Rownum limit</param>
+
+        // Add rownum to where clause.
         public void Rownum(int limit)
         {
             Where("ROWNUM", "<=", limit);
         }
 
 
-        /// <summary>
-        /// Adds from to the query.
-        /// </summary>
-        /// <param name="tableName">Name of the table</param>
+
+        // Adds from to the query.
+
         public void From(string tableName)
         {
             if (_query.Equals("") || _query.Length == 0 || _actionAdded == -1)
@@ -323,11 +298,8 @@
 
 
 
-        /// <summary>
-        /// Leftjoin
-        /// </summary>
-        /// <param name="table">Name of the table</param>
-        /// <param name="on">On clause</param>
+
+        // Leftjoin
         public void LeftJoin(string table, string on)
         {
             if (_query.Equals("") || _query.Length == 0 || _actionAdded == -1)
@@ -340,11 +312,8 @@
         }
 
 
-        /// <summary>
-        /// Right join. Exact copy of LeftJoin method but replaced Left with Right.
-        /// </summary>
-        /// <param name="table">Name of the table</param>
-        /// <param name="on">On clause</param>
+
+        // Right join. Exact copy of LeftJoin method but replaced Left with Right.
         public void RightJoin(string table, string on)
         {
             if (_query.Equals("") || _query.Length == 0 || _actionAdded == -1)
@@ -357,10 +326,8 @@
         }
 
 
-        /// <summary>
-        /// Throws a new IOException in case someone f**s it up.
-        /// </summary>
-        /// <param name="type">Correct query action.</param>
+       
+
         void InvalidActionUsed(int type) {
             if (_actionAdded == -1)
                 _actionAdded = type;
@@ -369,30 +336,26 @@
         }
 
 
-        /// <summary>
-        /// Check if the action is complete or ready to be used.
-        /// </summary>
-        /// <returns></returns>
+
+        // Check if the action is complete or ready to be used.
+
         public bool ActionReady()
         {
             return this._actionReady;
         }
 
 
-        /// <summary>
-        /// Gets the query.
-        /// </summary>
-        /// <returns>Query string</returns>
+
+        // Gets the query.
+
         public string GetQuery()
         {
             return this._query;
         }
 
 
-        /// <summary>
-        /// Sets a query manually
-        /// </summary>
-        /// <param name="query">Query to set</param>
+        // Sets a query manually
+
         public void SetQuery(string query)
         {
             this._query = query;

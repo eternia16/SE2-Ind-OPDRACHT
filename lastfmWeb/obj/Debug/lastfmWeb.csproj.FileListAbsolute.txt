@@ -47,6 +47,5 @@ c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Mic
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Microsoft.Owin.Security.OAuth.xml
-c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.csprojResolveAssemblyReference.cache
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.pdb

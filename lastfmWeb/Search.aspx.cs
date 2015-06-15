@@ -17,6 +17,7 @@ namespace lastfmWeb
         List<Artiest> artiesten = null;
         List<Artiest> artiestenAll = null;
         List<Album> albums = null;
+        List<Album> albumsAll = null;
         List<Track> tracks = null;
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -25,9 +26,10 @@ namespace lastfmWeb
             artiesten = artiestcon.getArtiest(query);
             artiestenAll = artiestcon.getArtiesten();
 
+
             albumcon = new AlbumController();
             albums = albumcon.getAlbum(query);
-
+            albumsAll = albumcon.getAlbums();
 
             trackcon = new TrackController();
             tracks = trackcon.getTrack(query);
@@ -58,12 +60,13 @@ namespace lastfmWeb
             {
                 foreach (Track x in tracks)
                 {
-                    Artiest xArtiest = artiesten.Find(z => z.id == x.artiest_id);
+                    Artiest xArtiest = artiestenAll.Find(z => z.id == x.artiest_id);
 
                     x.artiest = xArtiest.naam;
 
-                    Album xAlbum = albums.Find(z => z.id == x.album_id);
+                    Album xAlbum = albumsAll.Find(z => z.id == x.album_id);
                     x.album = xAlbum.naam;
+
                     string stringtijd = "";
                     int? temp_tijd = x.tijdsduur;
                     int counter = 0;

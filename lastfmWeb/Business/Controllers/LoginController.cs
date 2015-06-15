@@ -72,18 +72,65 @@ namespace lastfmWeb.Business.Controllers
 
             return _output;
         }
-
-        public ViewModel RegisterAction(ViewModel input)
+        public ViewModel loginTest(string gebruikersnaam)
         {
             ViewModel _output = new ViewModel();
+
+            GebruikerContext ctx = null;
+
+            try
+            {
+                ctx = new GebruikerContext();
+
+                Regex reg = new Regex(@"^[a-zA-Z0-9]*$");
+
+
+                if (!reg.IsMatch(gebruikersnaam))
+                    throw new Exception("Invalid username");
+
+                Gebruiker _Gebruiker = ctx.Get(new Gebruiker()
+                {
+                    gebruikersnaam = gebruikersnaam
+                });
+
+
+                if (_Gebruiker != null)
+                {
+                    _output.SetAttribute("success", "Logged in using " + _Gebruiker.gebruikersnaam);
+                    _Gebruiker.wachtwoord = null;
+                    _output.SetAttribute("Gebruiker", _Gebruiker);
+                }
+                else
+                {
+                    throw new Exception("Invalid login credentials");
+                }
+
+            }
+            finally
+            {
+                if (ctx != null)
+                {
+                    ctx.Close();
+                    ctx = null;
+                }
+            }
+
             return _output;
         }
 
-
-        public ViewModel LogoutAction()
+        public void RegisterGebruiker(Gebruiker gebruiker)
         {
-            ViewModel _output = new ViewModel();
-            return _output;
+            Regex reg = new Regex(@"^[a-zA-Z0-9]*$");
+            if (reg.IsMatch(gebruiker.gebruikersnaam) || reg.IsMatch(gebruiker.wachtwoord))
+            {
+                GebruikerContext gc = new GebruikerContext();
+                gc.InsertObjectQuery(gebruiker);
+                gc.Create(gebruiker);
+            }
+
+
         }
+
+
     }
 }

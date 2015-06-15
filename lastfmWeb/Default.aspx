@@ -11,7 +11,7 @@
         <h1>Last.fm</h1>
         <p class="lead">Last.fm is een sexy site waarmee je alles kan bijhouden over je favorieten artiesten en statistieken over je muziek luister gedrag</p>
 
-        <asp:Button ID="btRegistreer" runat="server" class="btn btn-primary btn-lg" Text="Registreer  nu!" />
+        <asp:Button ID="btRegistreer" runat="server" class="btn btn-primary btn-lg" Text="Registreer nu!" OnClick="btRegistreer_Click" />
     </div>
 
     <div class="row">
@@ -51,6 +51,9 @@
         
     </div>
 
+    </div>
+
+</div>
     </div>
 
 </asp:Content>

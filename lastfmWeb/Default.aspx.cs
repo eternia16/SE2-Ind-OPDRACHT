@@ -25,27 +25,35 @@ namespace lastfmWeb
         {
             LoginController lgc = new LoginController();
             ViewModel output = lgc.login(this.Email.Text, this.Password.Text);
+            Gebruiker _Gebruiker = (Gebruiker)output.GetAttribute("Gebruiker");
 
-            if (output.HasAttribute("Gebruiker"))
+            Session["Gebruikerid"] = _Gebruiker.id;
+            Session["gebruikernaam"] = _Gebruiker.gebruikersnaam;
+            //Rare naam aan administrator om afleiding te geven, natuurlijk is dit niet safe.
+            Session["cache_zzZKKKKss"] = _Gebruiker.administrator;
+            Session["Artiest"] = _Gebruiker.artiest_id;
+            this.Message2.Visible = true;
+            this.Message2.Text = "You logged in successfully, <b>" + _Gebruiker.gebruikersnaam + "</b>";
+
+            FormsAuthentication.RedirectFromLoginPage(Session.SessionID, false);
+            string currentUserName = HttpContext.Current.User.Identity.Name.ToString();
+            // 
+            if (this.RememberMe != null && this.RememberMe.Checked == true)
             {
-                Gebruiker _Gebruiker = (Gebruiker)output.GetAttribute("Gebruiker");
-
-                Session["Gebruikerid"] = _Gebruiker.id;
-                Session["gebruikernaam"] = _Gebruiker.gebruikersnaam;
-                Session["zzZKKKKss"] = _Gebruiker.administrator;
-                Session["Artiest"] = _Gebruiker.artiest_id;
-                this.Message2.Visible = true;
-                this.Message2.Text = "You logged in successfully, <b>" + _Gebruiker.gebruikersnaam + "</b>";
-
-                FormsAuthentication.RedirectFromLoginPage(Session.SessionID, false);
-                string currentUserName = HttpContext.Current.User.Identity.Name.ToString();
-               // Response.Redirect("~/User.aspx");
-
-                
+                HttpCookie cookie = new HttpCookie(Session.SessionID);
+                cookie.Expires.AddYears(1);
+                Response.Cookies.Add(cookie);
             }
-            else if (output.HasAttribute("error"))
-            {
-            }
+
+
+
+
+
+        }
+
+        protected void btRegistreer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/RegistreerUser.aspx");
         }
     }
 }

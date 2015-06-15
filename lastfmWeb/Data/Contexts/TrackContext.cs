@@ -76,10 +76,13 @@ namespace lastfmWeb.Data.Context
                     TrackList.Add(new Track()
                     {
                         id = reader.GetInt32("id"),
-                        artiest_id = reader.GetInt32("artiest_id"),
                         naam = reader.GetString("naam"),
-                        releasedate = reader.GetDateTime("releasedate"),
-                        omschrijving = reader.GetString("omschrijving")
+                        album_id = reader.GetInt32("album_id"),
+                        artiest_id = reader.GetInt32("artiest_id"),
+                        omschrijving = reader.GetString("omschrijving"),
+                        tijdsduur = reader.GetInt32("tijdsduur"),
+                        releasedate = reader.GetDateTime("releasedate")
+                        
 
                     });
                 }
