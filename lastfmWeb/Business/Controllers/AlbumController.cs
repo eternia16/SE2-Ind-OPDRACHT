@@ -28,6 +28,12 @@ namespace lastfmWeb.Business.Controllers
         }
         public List<Album> getAlbum(string query)
         {
+            Regex reg = new Regex(@"^[a-zA-Z0-9]*$");
+
+
+            if (!reg.IsMatch(query))
+                throw new Exception("Invalid username");
+
             string sendingquery = String.Format("%{0}%", query);
 
             AlbumContext ctx = new AlbumContext();

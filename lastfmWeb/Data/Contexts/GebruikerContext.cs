@@ -123,8 +123,6 @@ namespace lastfmWeb.Data.Context
         }
 
 
-        /// <summary>
-
         void Delete(Gebruiker Gebruiker)
         {
             OracleQueryBuilder queryBuilder = new OracleQueryBuilder(DeleteObjectQuery(Gebruiker));
@@ -135,14 +133,6 @@ namespace lastfmWeb.Data.Context
         }
 
 
-        /*
-         *  SPECIAL CONTEXT ACTIONS 
-         */
 
-        /// <summary>
-        /// Gets all the profiles of an Gebruiker.
-        /// </summary>
-        /// <param name="Gebruiker">Gebruiker with filled properties</param>
-        /// <returns>List of profiles who are linked to the Gebruiker</returns>
     }
 }

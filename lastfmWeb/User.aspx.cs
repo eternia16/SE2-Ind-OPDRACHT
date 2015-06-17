@@ -25,7 +25,7 @@ namespace lastfmWeb
             {
                 Response.Redirect("~/Default.aspx");
             }
-            int admin = (int)Session["zzZKKKKss"];
+            int admin = (int)Session["cache_zzZKKKKss"];
             int? artiest_id = (int?)Session["Artiest"];
             this.AdministratorDiv.Visible = false;
             this.artiestDiv.Visible = false;
@@ -94,6 +94,11 @@ namespace lastfmWeb
         {
             string query = String.Format("Search.aspx?query={0}", tbZoeken.Text);
             Response.Redirect(query);
+        }
+
+        protected void btScrobbel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/scrobble.aspx");
         }
     }
 }

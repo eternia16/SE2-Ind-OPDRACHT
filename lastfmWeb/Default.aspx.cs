@@ -23,6 +23,10 @@ namespace lastfmWeb
 
         protected void LogIn(object sender, EventArgs e)
         {
+            if (Session["Gebruikerid"] != null)
+            {
+                Response.Redirect("~/user.aspx");
+            }
             LoginController lgc = new LoginController();
             ViewModel output = lgc.login(this.Email.Text, this.Password.Text);
             Gebruiker _Gebruiker = (Gebruiker)output.GetAttribute("Gebruiker");
@@ -38,12 +42,6 @@ namespace lastfmWeb
             FormsAuthentication.RedirectFromLoginPage(Session.SessionID, false);
             string currentUserName = HttpContext.Current.User.Identity.Name.ToString();
             // 
-            if (this.RememberMe != null && this.RememberMe.Checked == true)
-            {
-                HttpCookie cookie = new HttpCookie(Session.SessionID);
-                cookie.Expires.AddYears(1);
-                Response.Cookies.Add(cookie);
-            }
 
 
 

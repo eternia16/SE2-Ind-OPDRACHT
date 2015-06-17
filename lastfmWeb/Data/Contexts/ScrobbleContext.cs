@@ -89,5 +89,14 @@ namespace lastfmWeb.Data.Context
             return Scrobbels;
         }
 
+        public void Create(Scrobbel scrobble)
+        {
+            OracleQueryBuilder queryBuilder = new OracleQueryBuilder(InsertObjectQuery(scrobble));
+
+            queryBuilder.CreateCommand(
+                GetConnection())
+                .ExecuteNonQuery();
+        }
+
     }
 }

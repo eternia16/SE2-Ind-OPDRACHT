@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lastfmWeb.Data.Context.AbonnementContext" Collapsed="true">
+    <Position X="26.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\AbonnementContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.AlbumContext" Collapsed="true">
+    <Position X="28.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\AlbumContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.ArtiestContext" Collapsed="true">
+    <Position X="30.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\ArtiestContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.GebruikerContext" Collapsed="true">
+    <Position X="33" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\GebruikerContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.ScrobbelContext" Collapsed="true">
+    <Position X="35.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\ScrobbleContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.ShoutContext" Collapsed="true">
+    <Position X="21.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\ShoutContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Context.TrackContext" Collapsed="true">
+    <Position X="24" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Contexts\TrackContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Abonnement" Collapsed="true">
+    <Position X="25.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAAAAAUAAAAgA=</HashCode>
+      <FileName>Data\Models\Abonnement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Album" Collapsed="true">
+    <Position X="27.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAACAAAAAAAAQAAAAACAAAAAAAAiA=</HashCode>
+      <FileName>Data\Models\Album.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Artiest" Collapsed="true">
+    <Position X="30" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAIAAAiA=</HashCode>
+      <FileName>Data\Models\Artiest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Bericht" Collapsed="true">
+    <Position X="32.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Data\Models\Bericht.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Favoriet" Collapsed="true">
+    <Position X="34.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAgA=</HashCode>
+      <FileName>Data\Models\favoriet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Gebruiker" Collapsed="true">
+    <Position X="36.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAEAAAEACAAAAAAQAQAAAIAACAAAgAAAAAIAAgA=</HashCode>
+      <FileName>Data\Models\Gebruiker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Scrobbel" Collapsed="true">
+    <Position X="39" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAEAAAAAAAACAQgAAAAAAAgA=</HashCode>
+      <FileName>Data\Models\Scrobbel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Shout" Collapsed="true">
+    <Position X="41.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAgCAAAAAAAQAAABAAAAAAAAACAAgAAAAAAAgA=</HashCode>
+      <FileName>Data\Models\Shout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Tag" Collapsed="true">
+    <Position X="43.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>Data\Models\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Data.Models.Track" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARAAAAAAAAAAAACAAAAAAAAQAAAAICAAAAABBAiA=</HashCode>
+      <FileName>Data\Models\Track.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Framework.Data.Models.Model" Collapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Framework\Data\Models\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="lastfmWeb.Framework.DbContext" Collapsed="true">
+    <Position X="28.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAEAAAAAACAQEBAAAAAAAAAAAAAAAAABCQAAA=</HashCode>
+      <FileName>Framework\DbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.AlbumController" Collapsed="true">
+    <Position X="26.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Controllers\AlbumController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.ArtiestController" Collapsed="true">
+    <Position X="28.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Controllers\ArtiestController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.LoginController" Collapsed="true">
+    <Position X="35.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEIAEAA=</HashCode>
+      <FileName>Business\Controllers\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.ScrobbleController" Collapsed="true">
+    <Position X="30.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Controllers\ScrobbleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.ShoutController" Collapsed="true">
+    <Position X="32" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Controllers\ShoutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Business.Controllers.TrackController" Collapsed="true">
+    <Position X="33.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Controllers\TrackController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.User" Collapsed="true">
+    <Position X="32.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEGAgACAAAAAAgACIAAABwBAAAQACQAAIAAAAIAAEA=</HashCode>
+      <FileName>User.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Search" Collapsed="true">
+    <Position X="30.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAABAAAQAAAACAABAEBAJAIAAAAIBAAA=</HashCode>
+      <FileName>Search.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.RegistreerUser" Collapsed="true">
+    <Position X="28.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAwAEAAAAIAAAAAAAAAAAAAAAAAACAACAAJEAoA=</HashCode>
+      <FileName>RegistreerUser.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb._Default" Collapsed="true">
+    <Position X="28.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAgAAAAAAAAgAAAAAABACAAAAAAIgAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.Contact" Collapsed="true">
+    <Position X="32.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Contact.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lastfmWeb.About" Collapsed="true">
+    <Position X="30.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>About.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

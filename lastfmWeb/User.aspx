@@ -8,7 +8,7 @@
 
     </div>
     <div>
-        <asp:Button ID="btScrobbel" class="btn-success" runat="server" Text="Scrobbel registeren" Width="188px" />
+        <asp:Button ID="btScrobbel" class="btn-success" runat="server" Text="Scrobbel registeren" Width="188px" OnClick="btScrobbel_Click" />
     </div>
 
     <div>

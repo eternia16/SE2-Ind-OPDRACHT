@@ -23,8 +23,15 @@ namespace lastfmWeb.Data.Models
         public string artiest { get; set; }
         public string album { get; set; }
         public string tijdsduur_string { get; set; }
+
+        public override string ToString()
+        {
+            return naam;
+        }
         
 
 
     }
+
+    
 }

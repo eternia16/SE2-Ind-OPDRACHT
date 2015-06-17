@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -176,6 +177,7 @@
     <Content Include="Models\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="RegistreerUser.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -210,6 +212,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="scrobble.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Site.Master" />
     <Content Include="User.aspx" />
@@ -403,6 +406,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistreerUser.aspx.cs">
@@ -411,6 +415,13 @@
     </Compile>
     <Compile Include="RegistreerUser.aspx.designer.cs">
       <DependentUpon>RegistreerUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scrobble.aspx.cs">
+      <DependentUpon>scrobble.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scrobble.aspx.designer.cs">
+      <DependentUpon>scrobble.aspx</DependentUpon>
     </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>

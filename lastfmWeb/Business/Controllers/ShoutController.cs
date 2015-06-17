@@ -28,7 +28,11 @@ namespace lastfmWeb.Business.Controllers
         }
         public List<Shout> getShout(Shout query)
         {
-          
+            Regex reg = new Regex(@"^[a-zA-Z0-9]*$");
+
+
+            if (!reg.IsMatch(query))
+                throw new Exception("Invalid username");
 
             ShoutContext ctx = new ShoutContext();
 

@@ -29,5 +29,11 @@ namespace lastfmWeb.Business.Controllers
 
 
         }
+
+        public void insertScrobbel(Scrobbel sc)
+        {
+            ScrobbelContext ctx = new ScrobbelContext();
+            ctx.Create(sc);
+        }
     }
 }

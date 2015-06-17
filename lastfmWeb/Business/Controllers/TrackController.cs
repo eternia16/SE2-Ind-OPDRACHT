@@ -28,6 +28,12 @@ namespace lastfmWeb.Business.Controllers
         }
         public List<Track> getTrack(string query)
         {
+            Regex reg = new Regex(@"^[a-zA-Z0-9]*$");
+
+
+            if (!reg.IsMatch(query))
+                throw new Exception("Invalid username");
+
             string sendingquery = String.Format("%{0}%", query);
 
             TrackContext ctx = new TrackContext();

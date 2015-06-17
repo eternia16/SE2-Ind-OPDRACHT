@@ -49,3 +49,6 @@ c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Mic
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\Microsoft.Owin.Security.OAuth.xml
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.dll
 c:\users\danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.pdb
+C:\Users\Danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\lastfmWeb.dll.CodeAnalysisLog.xml
+C:\Users\Danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\bin\lastfmWeb.dll.lastcodeanalysissucceeded
+C:\Users\Danny\documents\visual studio 2013\Projects\lastfmWeb\lastfmWeb\obj\Debug\lastfmWeb.csprojResolveAssemblyReference.cache
